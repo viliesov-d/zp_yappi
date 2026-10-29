@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b32">
+  <meta name="description" content="Календар змін 4/2 з автоматичним графіком, обліком заробітку та виплатами 10 і 25 числа.">
+  <title>Зміна — калькулятор зарплати 4/2</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSIjMTAxYzMzIi8+CjxwYXRoIGQ9Ik0xNCAxN2gzNk0xNCAzMmgzNk0xNCA0N2gyMCIgc3Ryb2tlPSIjYzJmMDc1IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI0NyIgY3k9IjQ3IiByPSI3IiBmaWxsPSIjYzJmMDc1Ii8+Cjwvc3ZnPgo=" type="image/svg+xml">
+  <style>
+:root{--ink:#17243a;--muted:#8290a3;--line:#e6edf1;--bg:#f4f7fa;--deep:#101c33;--green:#c2f075;--purple:#7468c9;--radius:22px;--shadow:0 12px 44px rgba(27,44,65,.04)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7769dc;outline-offset:3px}a{text-decoration:none}h1,h2,h3,p{margin:0}.site-shell{max-width:1510px;margin:0 auto;padding:0 40px}
+.site-header{height:91px;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:11px;color:var(--deep);font-size:27px;font-weight:850;letter-spacing:-1.6px}.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--deep);color:var(--green);border-radius:13px}.brand-mark svg{width:26px;height:26px}.brand-period{color:#88bd43}.header-right{display:flex;align-items:center;gap:20px}.save-status{display:flex;gap:8px;align-items:center;color:#708092;font-size:12px;font-weight:600}.status-dot{width:7px;height:7px;background:#7dbc5a;border-radius:50%;box-shadow:0 0 0 4px #e3f2d8}.save-status.warning{color:#b45b54}.save-status.warning .status-dot{background:#e76b6b;box-shadow:0 0 0 4px #fce5e5}.header-help{width:31px;height:31px;border:1px solid #d9e1e8;border-radius:50%;background:#fff;color:#7c8796;font-weight:750}
+.hero{background:var(--deep);border-radius:29px;color:#fff;min-height:320px;display:grid;grid-template-columns:1.15fr 1fr;position:relative;overflow:hidden;padding:49px 61px 44px}.hero-copy{position:relative;z-index:2}.eyebrow,.section-kicker,.dialog-kicker,.side-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.8px}.eyebrow{color:var(--green);display:flex;gap:10px;align-items:center}.eyebrow-dot{background:var(--green);width:7px;height:7px;border-radius:50%}.hero h1{font-size:clamp(35px,3.55vw,57px);line-height:1.09;letter-spacing:-2.7px;margin:21px 0 15px;font-weight:850}.hero h1 span{color:var(--green)}.hero p{max-width:455px;font-size:14px;color:#b6c2d2;line-height:1.7}.hero-link{display:inline-flex;align-items:center;gap:15px;color:var(--deep);background:var(--green);border-radius:11px;padding:12px 17px;margin-top:23px;font-size:12px;font-weight:800;transition:transform .2s,background .2s}.hero-link:hover{transform:translateY(-2px);background:#d4fc90}.hero-link span{font-size:18px}.hero-art{position:relative;min-width:0;display:flex;align-items:center;justify-content:center}.art-orb{position:absolute;border-radius:50%}.orb-1{background:#283959;width:360px;height:360px;right:-95px;top:-165px}.orb-2{background:linear-gradient(100deg,#223b47,#28375b);width:310px;height:310px;bottom:-195px;left:7%}.mini-calendar{width:min(325px,90%);background:#fff;border-radius:17px;transform:rotate(-5deg) translate(10px,3px);box-shadow:0 18px 30px #07101d40;color:var(--ink);position:relative;padding:23px 24px 19px;z-index:1}.mini-cal-heading{display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:850;letter-spacing:2px;color:#6c7c8c}.mini-cal-icon{background:#eff7e7;border-radius:8px;color:#699b39;font-size:18px;font-weight:500;padding:1px 8px}.mini-cal-days,.mini-cal-cells{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;text-align:center}.mini-cal-days{margin:23px 0 10px;color:#8b97a7;font-size:9px;font-weight:850}.mini-cal-cells span{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;font-size:14px;font-weight:850}.mini-cal-cells .on{background:#daf5b2;color:#254f37}.mini-cal-cells .rest{background:#edf1f5;color:#8792a4}.mini-cal-bottom{display:flex;align-items:center;gap:8px;color:#556578;font-size:11px;font-weight:650;margin-top:20px}.mini-cal-bottom b{color:#aab3c3}.green-spark{color:#79bd47;font-size:22px}.floating-coin{position:absolute;display:grid;place-items:center;z-index:2;box-shadow:0 13px 30px #07101d33}.coin-a{right:8%;top:20px;background:#c6f18c;color:#37562c;width:62px;height:62px;border-radius:17px;transform:rotate(13deg);font-size:32px;font-weight:800}.coin-b{left:11%;bottom:8px;background:#a8a1f9;color:#fff;width:46px;height:46px;border-radius:16px;transform:rotate(-19deg);font-size:30px}
+.overview{padding-top:40px}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.section-kicker{color:#93a1ae;margin-bottom:7px}.section-heading h2,.calendar-header h2{font-size:25px;letter-spacing:-.85px;font-weight:850}.view-period{font-size:12px;color:#738395;border-radius:999px;background:#fff;padding:8px 13px;font-weight:700;text-transform:capitalize}.summary-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr .94fr;gap:15px}.stat-card{min-width:0;background:#fff;border:1px solid #edf1f4;border-radius:19px;padding:23px 23px 20px;box-shadow:var(--shadow)}.stat-main{background:#e9f7df;border-color:#e3f0dc}.stat-label{font-size:12px;color:#647489;font-weight:730;display:flex;justify-content:space-between;align-items:center;gap:8px}.stat-main .stat-label{color:#536a47}.stat-icon{background:#c9e8af;border-radius:8px;color:#557a3d;padding:4px 8px;font-size:18px}.stat-symbol{font-size:18px;color:#b5c0cb}.stat-value{font-size:clamp(21px,2.18vw,34px);letter-spacing:-1.4px;font-weight:850;white-space:nowrap;margin:23px 0 13px;font-variant-numeric:tabular-nums}.stat-foot{font-size:11px;line-height:1.45;color:#91a0ad}.stat-main .stat-foot{color:#66805d}
+.workspace{display:grid;grid-template-columns:minmax(0,1.93fr) minmax(310px,.94fr);gap:22px;align-items:start;padding-top:30px}.calendar-panel,.side-card{background:#fff;border:1px solid #ebf0f3;border-radius:var(--radius);box-shadow:var(--shadow)}.calendar-panel{padding:28px 26px 25px;min-width:0}.calendar-header{display:flex;align-items:center;justify-content:space-between;gap:13px;margin-bottom:22px}.month-navigation{display:flex;align-items:center;gap:8px}.nav-arrow{background:#f4f6f8;border:none;border-radius:9px;width:34px;height:35px;font-size:29px;line-height:0;color:#596a7e;display:grid;place-items:center;padding-bottom:4px}.nav-arrow:hover{background:#e8edf1}.month-label{background:transparent;border:0;font-size:14px;font-weight:850;color:#24334b;min-width:145px;text-transform:capitalize;padding:8px 0}.calendar-instruction{background:#f6f8fb;border-radius:10px;padding:12px 14px;color:#8290a1;font-size:11px;font-weight:550;margin-bottom:21px;display:flex;align-items:center;gap:9px}.instruction-icon{color:#8f89bd;font-size:16px}.weekdays,.day-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.weekdays{margin-bottom:10px}.weekdays span{text-align:center;color:#9da9b4;font-weight:800;font-size:11px;padding:3px}.day-grid{align-items:stretch}.calendar-day{border:1px solid #e7edf1;border-radius:11px;background:#fff;min-width:0;min-height:111px;padding:10px 9px;display:flex;flex-direction:column;text-align:left;position:relative;transition:transform .12s,border-color .12s,box-shadow .12s;color:var(--ink)}.calendar-day:not(.outside):hover{transform:translateY(-2px);z-index:1;box-shadow:0 8px 17px #16283e12;border-color:#afca93}.calendar-day.outside{background:#f8fafb;border-color:#f4f6f8;cursor:default;opacity:.38}.calendar-day.work{background:#f1f9e9;border-color:#e2f1d9}.calendar-day.off{background:#f8f9fb}.calendar-day.replacement{background:#fff5e2;border-color:#f8e6c2}.calendar-day.unpaid{background:#fff0ee;border-color:#f8dad6}.calendar-day.today{outline:2px solid #5eac61;outline-offset:-2px}.calendar-day.has-payday{box-shadow:inset 0 -3px #8071d1}.calendar-day .day-top{display:flex;justify-content:space-between;gap:3px;align-items:start}.date-number{font-size:13px;font-weight:850}.calendar-day .day-indicator{font-size:9px;font-weight:850;color:#507743;background:#d7eec4;padding:3px 5px;border-radius:5px}.calendar-day.off .day-indicator{color:#9da9b5;background:#ebeff3}.calendar-day.replacement .day-indicator{background:#ffe3ad;color:#976a20}.calendar-day.unpaid .day-indicator{background:#ffd9d3;color:#a95249}.calendar-day .day-label{font-size:10px;color:#809099;font-weight:650;margin-top:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mobile-income{display:none}.day-income{margin-top:auto;font-size:12px;font-weight:850;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.day-income.empty{font-size:10px;color:#9aaa9e;font-weight:550}.calendar-day.off .day-income,.calendar-day.unpaid .day-income{color:#aab6c1}.payday-chip{display:block;background:#edeafe;color:#665bc0;border-radius:5px;padding:3px 5px;font-size:9px;line-height:1.25;font-weight:850;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pay-mobile{display:none}.calendar-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:22px}.legend{display:flex;flex-wrap:wrap;gap:11px 15px}.legend>span{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:650;color:#8b99a8}.legend-color{width:9px;height:9px;border-radius:3px;display:inline-block}.legend-work{background:#bce7a5}.legend-off{background:#e4e9ee}.legend-replacement{background:#ffdb96}.legend-unpaid{background:#ffbab1}.legend-pay{background:#9a8de9}.today-link{border:none;background:none;white-space:nowrap;color:#659847;font-size:11px;font-weight:850;padding:4px}
+.sidebar{display:flex;flex-direction:column;gap:17px}.side-card{padding:25px}.side-topline{display:flex;align-items:center;justify-content:space-between;gap:8px}.side-icon{width:37px;height:37px;display:grid;place-items:center;background:#e6f7d9;border-radius:12px;font-weight:850;color:#679243;font-size:20px}.side-eyebrow{color:#b5bec8;font-size:9px;letter-spacing:1.2px}.side-card h3{font-size:19px;line-height:1.25;letter-spacing:-.45px;margin:15px 0 8px}.side-description{font-size:12px;color:#8b99a6;line-height:1.7;margin:0 0 17px}.payout-item{border:1px solid #e2f0d8;background:#f5fbee;border-radius:13px;padding:15px 15px 14px;margin-top:10px}.payout-next{background:#f5f4ff;border-color:#e7e4fa}.payout-header{display:flex;gap:10px;align-items:center}.pay-number{flex:0 0 39px;height:39px;background:#d9eecb;color:#4d783d;border-radius:10px;display:grid;place-items:center;font-size:20px;font-weight:850}.pay-next-number{background:#e3dff9;color:#7265bc}.payout-meta{min-width:0;display:flex;flex-direction:column;gap:5px}.payout-meta strong{font-size:12px;color:#26374e}.payout-meta span{font-size:10px;color:#8d9b9f;text-transform:capitalize}.pay-check{margin-left:auto;color:#8ea17e}.payout-next .pay-check{color:#948ccc}.pay-amount{font-size:26px;font-weight:850;letter-spacing:-1px;margin:16px 0 5px}.pay-range{font-size:10px;color:#8b998b}.payout-next .pay-range{color:#9b96b4}.payout-note{margin-top:16px;background:#f6f7fa;border-radius:9px;padding:11px;font-size:10px;line-height:1.55;color:#8492a3}.payout-note span{font-size:14px;margin-right:4px}.payout-note strong{color:#526276}
+.settings-heading{display:flex;align-items:center;gap:11px}.settings-heading-icon{width:38px;height:38px;background:#eff2f7;color:#7989a1;border-radius:11px;display:grid;place-items:center;font-size:21px}.settings-heading h3{margin:3px 0 0}.settings-panel .side-description{margin:14px 0 18px}.settings-panel label{display:block;color:#5b6c80;font-size:11px;font-weight:750;margin:0 0 7px}.settings-panel input,.settings-panel select{display:block;width:100%;border:1px solid #e5ebf0;border-radius:10px;background:#fafcfd;padding:11px 13px;color:#3e4e60;font-size:12px;min-height:42px;margin-bottom:17px;color-scheme:light}.apply-button{background:var(--deep);color:white;border:none;border-radius:10px;padding:12px 15px;width:100%;font-weight:750;font-size:12px;display:flex;justify-content:space-between;align-items:center}.apply-button:hover{background:#243554}.apply-button span{font-size:17px}.settings-note{margin-top:15px;color:#9baaab;font-size:10px;line-height:1.5;display:flex;gap:8px}.settings-note span{font-size:18px;color:#7daa52;line-height:1}.backup-heading{display:flex;align-items:center;gap:10px}.backup-heading h3{margin:0;font-size:16px}.backup-icon{background:#eef1ff;color:#8377c7;border-radius:9px;width:32px;height:32px;display:grid;place-items:center;font-size:18px}.backup-panel .side-description{margin-top:13px}.backup-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.backup-actions button{border:1px solid #dfe7ed;background:#fff;border-radius:9px;min-height:39px;font-size:11px;font-weight:750;color:#536679}.backup-actions button:hover{background:#f3f7fb}.site-footer{display:flex;justify-content:space-between;gap:20px;padding:37px 3px 27px;color:#a4b0bc;font-size:11px}.site-footer strong{font-size:14px;color:#6a7788;letter-spacing:-.5px;margin-right:7px}
+.day-dialog,.help-dialog{border:0;border-radius:22px;box-shadow:0 25px 100px #071b3f33;width:min(95vw,485px);max-height:90vh;overflow:auto;padding:29px;color:var(--ink)}.day-dialog::backdrop,.help-dialog::backdrop{background:rgba(15,27,48,.56);backdrop-filter:blur(3px)}.dialog-heading-row,.help-top{display:flex;justify-content:space-between;gap:20px;align-items:start}.dialog-kicker{color:#9babba}.dialog-heading-row h2,.help-top h2{font-size:25px;letter-spacing:-1px;margin:8px 0 5px;text-transform:capitalize}.dialog-heading-row p{font-size:12px;color:#8b99aa}.dialog-close{border:0;background:#f2f5f8;color:#77869b;border-radius:9px;width:31px;height:31px;font-size:24px;display:grid;place-items:center;line-height:1}.dialog-field-label{display:block;margin:23px 0 10px;font-size:12px;font-weight:800;color:#4a596c}.day-status-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.status-option{cursor:pointer;position:relative}.status-option input{position:absolute;opacity:0;pointer-events:none}.status-option span{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:74px;border-radius:10px;border:1px solid #e4eaf0;padding:9px 4px;background:#fff}.status-option b{font-size:11px;color:#536176;line-height:1.35}.status-option small{font-size:9px;margin-top:6px;color:#9ba6b5}.status-option input:checked+span{border-color:#87b764;background:#f3f9ea;box-shadow:inset 0 0 0 1px #87b764}.status-option input:focus-visible+span{outline:3px solid #7769dc;outline-offset:3px}.money-field{display:flex;align-items:center;border:1px solid #e1e9ee;border-radius:11px;overflow:hidden;padding-left:14px;background:#fafcfd}.money-field>span{font-size:18px;color:#72965b;font-weight:800}.money-field input{width:100%;min-width:0;padding:13px 12px;border:0;outline:0;background:transparent;font-size:18px;font-weight:750;color:#23374c}.money-field:focus-within{border-color:#93be76;box-shadow:0 0 0 3px #e8f5da}.money-field.disabled{background:#f2f4f6;opacity:.6}.field-hint{font-size:10px;color:#99a6b2;line-height:1.5;margin-top:7px}.optional{font-size:10px;color:#a6b1bc;font-weight:500}#day-note{resize:vertical;display:block;width:100%;border:1px solid #e1e9ee;background:#fafcfd;border-radius:10px;padding:11px 12px;font-size:12px;color:#43546a}.form-error{font-size:11px;color:#c24747;margin:13px 0}.dialog-actions{display:flex;gap:10px;justify-content:space-between;margin-top:27px}.reset-button,.save-day-button{border:0;border-radius:10px;padding:13px 15px;font-size:12px;font-weight:800}.reset-button{background:#f1f4f7;color:#69788b}.save-day-button{background:var(--deep);color:#fff;display:flex;align-items:center;gap:12px}.save-day-button:hover{background:#27395a}.save-day-button span{font-size:17px}.toast{position:fixed;right:24px;bottom:22px;z-index:30;background:#1a2b42;color:#fff;border-radius:12px;padding:12px 18px;font-size:12px;font-weight:650;box-shadow:0 15px 30px #1b253933;max-width:min(400px,90vw);opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.visible{opacity:1;transform:translateY(0)}.help-dialog{width:min(95vw,495px)}.help-top h2{margin:0}.help-dialog ol{padding-left:22px;color:#6d7b8d;font-size:13px;line-height:1.65}.help-dialog li{margin-bottom:13px}.help-dialog strong{color:#27364d}.help-done{justify-content:center;margin-top:20px}
+@media(max-width:1180px){.site-shell{padding:0 24px}.workspace{grid-template-columns:minmax(0,1.6fr) minmax(290px,.93fr);gap:16px}.calendar-panel{padding:22px 17px}.day-grid,.weekdays{gap:5px}.calendar-day{padding:8px 6px;min-height:103px}.stat-card{padding:20px 16px}.stat-value{font-size:24px}.side-card{padding:19px}.legend{gap:8px}.legend>span{font-size:9px}}
+@media(max-width:950px){.hero{padding:40px}.workspace{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.backup-panel{grid-column:2}.day-grid,.weekdays{gap:7px}.calendar-day{min-height:112px;padding:10px}.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stat-value{font-size:30px}.stat-card{min-height:155px}.hero-art{transform:scale(.88)}}
+@media(max-width:640px){.site-shell{padding:0 12px}.site-header{height:72px}.brand{font-size:23px}.brand-mark{width:36px;height:36px}.save-status{font-size:0}.save-status .status-dot{width:8px;height:8px}.header-right{gap:12px}.hero{border-radius:21px;min-height:0;display:block;padding:29px 24px 30px}.hero h1{font-size:40px;letter-spacing:-1.8px;margin:17px 0 12px}.hero p{font-size:12px}.hero-art{display:none}.hero-link{margin-top:19px}.overview{padding-top:30px}.section-heading{margin-bottom:15px}.section-heading h2{font-size:22px}.view-period{font-size:10px;padding:7px 9px}.summary-grid{gap:9px}.stat-card{border-radius:14px;min-height:133px;padding:16px 13px}.stat-label{font-size:10px}.stat-symbol{font-size:14px}.stat-value{font-size:clamp(19px,5.7vw,27px);letter-spacing:-.8px;margin:20px 0 12px}.stat-foot{font-size:9px}.workspace{padding-top:14px;gap:14px}.calendar-panel{padding:19px 10px 19px;border-radius:17px}.calendar-header{padding:0 6px;gap:6px;margin-bottom:16px}.calendar-header h2{font-size:21px}.month-navigation{gap:2px}.month-label{min-width:109px;font-size:11px}.nav-arrow{width:27px;height:29px;font-size:24px}.calendar-instruction{margin:0 4px 15px;padding:10px;font-size:10px}.day-grid,.weekdays{gap:3px}.weekdays{margin-bottom:5px}.weekdays span{font-size:9px}.calendar-day{min-height:85px;padding:6px 3px;border-radius:7px}.date-number{font-size:12px}.calendar-day .day-indicator{padding:2px 3px;font-size:7px}.calendar-day .day-label{display:none}.day-income{font-size:10px;letter-spacing:-.3px}.pay-desktop{display:none}.pay-mobile{display:inline}.desktop-income{display:none}.mobile-income{display:block}.day-income.empty{font-size:8px}.payday-chip{font-size:7px;padding:3px 2px;margin-top:5px}.calendar-footer{align-items:start;flex-direction:column;padding:18px 6px 1px}.legend{gap:9px 11px}.legend>span{font-size:9px}.today-link{padding:8px 0}.sidebar{display:flex}.side-card{padding:22px;border-radius:17px}.site-footer{padding:28px 5px 21px;flex-direction:column;gap:7px;font-size:10px}.day-dialog,.help-dialog{padding:23px 18px;border-radius:18px}.day-status-options{gap:5px}.status-option span{min-height:76px}.status-option b{font-size:10px}.status-option small{font-size:8px}.dialog-actions{gap:6px}.reset-button,.save-day-button{font-size:11px;padding:11px}.toast{right:10px;bottom:10px}}
+@media(max-width:370px){.hero h1{font-size:35px}.month-label{min-width:93px;font-size:10px}.calendar-header h2{font-size:19px}.stat-value{font-size:19px}.calendar-day{min-height:80px;padding:4px 2px}.day-label{letter-spacing:-.25px}.payday-chip{font-size:6.5px}.calendar-day .day-indicator{font-size:6px}.day-income{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Зміна — на головну">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 8.5h18M7 16h18M7 23.5h11" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><circle cx="24" cy="23.5" r="3.5" fill="currentColor"/></svg></span>
+        <span>зміна<span class="brand-period">.</span></span>
+      </a>
+      <div class="header-right">
+        <span class="save-status" id="save-status"><span class="status-dot"></span> Дані зберігаються на пристрої</span>
+        <button type="button" class="header-help" id="help-button" aria-label="Як користуватися" title="Як користуватися">?</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> ВАШ ОСОБИСТИЙ ОБЛІК ЗМІН</div>
+          <h1 id="hero-title">Кожна зміна.<br><span>Кожна гривня.</span></h1>
+          <p>Ваш графік 4/2, заробіток за днями та дати виплат — тепер усе в одному календарі.</p>
+          <a class="hero-link" href="#calendar-section">Перейти до календаря <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orb orb-1"></div><div class="art-orb orb-2"></div>
+          <div class="mini-calendar">
+            <div class="mini-cal-heading"><span>МІЙ ГРАФІК</span><span class="mini-cal-icon">↗</span></div>
+            <div class="mini-cal-days"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span></div>
+            <div class="mini-cal-cells"><span class="on">1</span><span class="on">2</span><span class="on">3</span><span class="on">4</span><span class="rest">5</span><span class="rest">6</span></div>
+            <div class="mini-cal-bottom"><span class="green-spark">✦</span><span>4 дні працюємо <b>·</b> 2 відпочиваємо</span></div>
+          </div>
+          <span class="floating-coin coin-a">₴</span><span class="floating-coin coin-b">✳</span>
+        </div>
+      </section>
+
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="section-heading overview-heading">
+          <div><div class="section-kicker">ФІНАНСОВИЙ ОГЛЯД</div><h2 id="overview-title">Підсумок місяця</h2></div>
+          <span class="view-period" id="overview-period"></span>
+        </div>
+        <div class="summary-grid">
+          <article class="stat-card stat-main"><div class="stat-label">Зароблено за місяць <span class="stat-icon" aria-hidden="true">↗</span></div><div class="stat-value" id="stat-total">0 ₴</div><div class="stat-foot">Сума всіх внесених змін</div></article>
+          <article class="stat-card"><div class="stat-label">З 1 по 15 число <span class="stat-symbol">◐</span></div><div class="stat-value" id="stat-first">0 ₴</div><div class="stat-foot">Виплата 25 числа</div></article>
+          <article class="stat-card"><div class="stat-label">З 16 до кінця <span class="stat-symbol">◑</span></div><div class="stat-value" id="stat-second">0 ₴</div><div class="stat-foot">Виплата 10 числа наступного місяця</div></article>
+          <article class="stat-card"><div class="stat-label">Заповнено змін <span class="stat-symbol">✳</span></div><div class="stat-value" id="stat-shifts">0 / 0</div><div class="stat-foot" id="shifts-caption">За поточним графіком</div></article>
+        </div>
+      </section>
+
+      <section class="workspace" id="calendar-section" aria-label="Календар і налаштування">
+        <div class="calendar-panel">
+          <div class="calendar-header">
+            <div><div class="section-kicker">ВАШ РОБОЧИЙ ЧАС</div><h2>Календар змін</h2></div>
+            <div class="month-navigation" aria-label="Навігація по місяцях">
+              <button type="button" class="nav-arrow" id="previous-month" aria-label="Попередній місяць">‹</button>
+              <button type="button" class="month-label" id="month-label" title="Повернутися до поточного місяця"></button>
+              <button type="button" class="nav-arrow" id="next-month" aria-label="Наступний місяць">›</button>
+            </div>
+          </div>
+          <div class="calendar-instruction"><span class="instruction-icon">✦</span> Натисніть на день, щоб додати заробіток або змінити його статус.</div>
+          <div class="calendar-grid" role="grid" aria-label="Дні місяця">
+            <div class="weekdays" role="row"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+            <div class="day-grid" id="day-grid"></div>
+          </div>
+          <div class="calendar-footer">
+            <div class="legend"><span><i class="legend-color legend-work"></i> Робоча</span><span><i class="legend-color legend-off"></i> Вихідний</span><span><i class="legend-color legend-replacement"></i> Заміна</span><span><i class="legend-color legend-unpaid"></i> За свій рахунок</span><span><i class="legend-color legend-pay"></i> День виплати</span></div>
+            <button type="button" class="today-link" id="today-button">Поточний місяць ↗</button>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <section class="side-card payday-panel" aria-labelledby="payday-title">
+            <div class="side-topline"><div class="side-icon">₴</div><span class="side-eyebrow">БЕЗ ПЛУТАНИНИ В ДАТАХ</span></div>
+            <h3 id="payday-title">Коли прийде зарплата?</h3>
+            <p class="side-description">За заробіток у вибраному місяці:</p>
+            <div class="payout-item">
+              <div class="payout-header"><div class="pay-number">25</div><div class="payout-meta"><strong>Зарплата 25 числа</strong><span id="pay-25-date"></span></div><span class="pay-check">↗</span></div>
+              <div class="pay-amount" id="pay-25-amount">0 ₴</div><div class="pay-range">За роботу з 1 по 15 число</div>
+            </div>
+            <div class="payout-item payout-next">
+              <div class="payout-header"><div class="pay-number pay-next-number">10</div><div class="payout-meta"><strong>Зарплата 10 числа</strong><span id="pay-10-date"></span></div><span class="pay-check">↗</span></div>
+              <div class="pay-amount" id="pay-10-amount">0 ₴</div><div class="pay-range">За роботу з 16 до кінця місяця</div>
+            </div>
+            <div class="payout-note"><span>ⓘ</span> У календарі 10 числа показується виплата за другу половину <strong>попереднього</strong> місяця.</div>
+          </section>
+
+          <section class="side-card settings-panel" aria-labelledby="settings-title">
+            <div class="settings-heading"><div class="settings-heading-icon">⚙</div><div><div class="side-eyebrow">НАЛАШТУВАННЯ</div><h3 id="settings-title">Графік 4/2</h3></div></div>
+            <p class="side-description">Оберіть опорну дату та її місце у циклі. Календар автоматично перерахує всі місяці.</p>
+            <form id="schedule-form">
+              <label for="anchor-date">Опорна дата</label>
+              <input type="date" id="anchor-date" min="1900-01-01" max="2100-12-31" required>
+              <label for="anchor-position">Який це день циклу?</label>
+              <select id="anchor-position">
+                <option value="1">1-й робочий день</option>
+                <option value="2">2-й робочий день</option>
+                <option value="3">3-й робочий день</option>
+                <option value="4">4-й робочий день</option>
+                <option value="5">1-й вихідний</option>
+                <option value="6">2-й вихідний</option>
+              </select>
+              <button class="apply-button" type="submit">Застосувати графік <span>↗</span></button>
+            </form>
+            <div class="settings-note"><span>✧</span> Внесені суми й ручні позначки залишаться на своїх датах.</div>
+          </section>
+
+          <section class="side-card backup-panel">
+            <div class="backup-heading"><div class="backup-icon">⇩</div><h3>Резервна копія</h3></div>
+            <p class="side-description">Дані зберігаються у цьому браузері. Створіть копію, щоб перенести їх на інший пристрій.</p>
+            <div class="backup-actions"><button type="button" id="export-button">Експорт JSON</button><button type="button" id="import-button">Імпорт</button></div>
+            <input id="import-file" type="file" accept=".json,application/json" hidden>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span><strong>зміна.</strong> Ваші зміни — ваші правила.</span><span>Всі суми в гривнях · Зберігається локально</span></footer>
+  </div>
+
+  <dialog id="day-dialog" class="day-dialog" aria-labelledby="dialog-heading">
+    <form id="day-form" novalidate>
+      <div class="dialog-heading-row"><div><div class="dialog-kicker">РЕДАГУВАННЯ ДНЯ</div><h2 id="dialog-heading"></h2><p id="dialog-schedule"></p></div><button type="button" class="dialog-close" id="dialog-close" aria-label="Закрити">×</button></div>
+      <div class="dialog-field-label">Статус дня</div>
+      <div class="day-status-options" role="radiogroup" aria-label="Статус дня">
+        <label class="status-option"><input type="radio" name="day-status" value="scheduled" checked><span><b>За графіком</b><small id="scheduled-hint">Автоматично</small></span></label>
+        <label class="status-option"><input type="radio" name="day-status" value="unpaid"><span><b>За свій рахунок</b><small>Без заробітку</small></span></label>
+        <label class="status-option"><input type="radio" name="day-status" value="replacement"><span><b>Вийшла на заміну</b><small>Додаткова зміна</small></span></label>
+      </div>
+      <label class="dialog-field-label" for="day-amount">Заробіток за день, ₴</label>
+      <div class="money-field"><span>₴</span><input type="text" id="day-amount" inputmode="decimal" autocomplete="off" placeholder="Наприклад, 1500" maxlength="13"></div>
+      <p class="field-hint" id="amount-hint">Внесіть фактичний заробіток за цю зміну.</p>
+      <label class="dialog-field-label" for="day-note">Примітка <span class="optional">(необов'язково)</span></label>
+      <textarea id="day-note" rows="2" maxlength="250" placeholder="Наприклад, додаткова зміна"></textarea>
+      <p class="form-error" id="day-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button type="button" class="reset-button" id="reset-day">Очистити день</button><button class="save-day-button" type="submit">Зберегти зміни <span>↗</span></button></div>
+    </form>
+  </dialog>
+
+  <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
+    <div class="help-top"><h2 id="help-title">Як користуватися</h2><button type="button" class="dialog-close" id="help-close" aria-label="Закрити">×</button></div>
+    <ol><li><strong>Налаштуйте графік.</strong> Вкажіть відому дату та номер дня в циклі 4/2. Графік працює безперервно через межі місяців.</li><li><strong>Натискайте на дні.</strong> Для робочої зміни введіть фактичну суму. Для додаткової роботи виберіть «Вийшла на заміну», а для пропущеної — «За свій рахунок».</li><li><strong>Переглядайте виплати.</strong> Заробіток з 1 по 15 виплачується 25-го цього місяця, з 16 до кінця — 10-го наступного. Дати виплат позначені у календарі.</li><li><strong>Зберігайте копію.</strong> Дані лишаються в поточному браузері, а JSON-файл можна експортувати й імпортувати.</li></ol>
+    <button class="apply-button help-done" type="button" id="help-done">Зрозуміло</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* Pure date and salary helpers. All financial values are stored as integer kopiykas. */
+(function (root, factory) {
+  const logic = factory();
+  if (typeof module !== 'undefined' && module.exports) module.exports = logic;
+  root.SalaryLogic = logic;
+})(typeof window !== 'undefined' ? window : globalThis, function () {
+  'use strict';
+
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const integerFormatter = new Intl.NumberFormat('uk-UA', { maximumFractionDigits: 0 });
+  const dateFormatter = new Intl.DateTimeFormat('uk-UA', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+  function iso(year, month, day) {
+    return `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+  }
+  function dateParts(value) {
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+    const [year, month, day] = value.split('-').map(Number);
+    if (year < 1900 || year > 2100 || month < 1 || month > 12 || day < 1 || day > 31) return null;
+    const date = new Date(Date.UTC(year, month - 1, day));
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return null;
+    return { year, month, day };
+  }
+  function utcDay(value) {
+    const p = dateParts(value);
+    return p ? Date.UTC(p.year, p.month - 1, p.day) / DAY_MS : NaN;
+  }
+  function daysInMonth(year, month) { return new Date(Date.UTC(year, month, 0)).getUTCDate(); }
+  function shiftMonth(year, month, offset) {
+    const d = new Date(Date.UTC(year, month - 1 + offset, 1));
+    return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1 };
+  }
+  function mod(n, m) { return ((n % m) + m) % m; }
+  function isScheduledWork(date, anchorDate, anchorPosition) {
+    return mod(utcDay(date) - utcDay(anchorDate) + anchorPosition - 1, 6) < 4;
+  }
+  function dayType(date, state) {
+    const entry = state.days[date];
+    if (entry?.override === 'unpaid') return 'unpaid';
+    if (entry?.override === 'replacement') return 'replacement';
+    return isScheduledWork(date, state.anchorDate, state.anchorPosition) ? 'work' : 'off';
+  }
+  function isWorking(type) { return type === 'work' || type === 'replacement'; }
+  function dayAmount(date, state) {
+    if (!isWorking(dayType(date, state))) return 0;
+    const amount = state.days[date]?.amount;
+    return Number.isSafeInteger(amount) && amount >= 0 ? amount : 0;
+  }
+  function periodTotal(state, year, month, startDay, endDay) {
+    let result = 0;
+    const max = Math.min(endDay, daysInMonth(year, month));
+    for (let day = startDay; day <= max; day++) result += dayAmount(iso(year, month, day), state);
+    return result;
+  }
+  function monthStats(state, year, month) {
+    let recorded = 0, working = 0, replacements = 0, unpaid = 0;
+    const last = daysInMonth(year, month);
+    for (let d = 1; d <= last; d++) {
+      const date = iso(year, month, d), type = dayType(date, state);
+      if (isWorking(type)) {
+        working++;
+        if (Object.prototype.hasOwnProperty.call(state.days[date] || {}, 'amount')) recorded++;
+        if (type === 'replacement') replacements++;
+      }
+      if (type === 'unpaid') unpaid++;
+    }
+    const firstHalf = periodTotal(state, year, month, 1, 15);
+    const secondHalf = periodTotal(state, year, month, 16, last);
+    return { total: firstHalf + secondHalf, firstHalf, secondHalf, recorded, working, replacements, unpaid };
+  }
+  function payday(date, state) {
+    const p = dateParts(date);
+    if (!p || (p.day !== 10 && p.day !== 25)) return null;
+    if (p.day === 25) return {
+      kind: 25, period: `${iso(p.year, p.month, 1)} — ${iso(p.year, p.month, 15)}`,
+      amount: periodTotal(state, p.year, p.month, 1, 15)
+    };
+    const prev = shiftMonth(p.year, p.month, -1);
+    return {
+      kind: 10, period: `${iso(prev.year, prev.month, 16)} — ${iso(prev.year, prev.month, daysInMonth(prev.year, prev.month))}`,
+      amount: periodTotal(state, prev.year, prev.month, 16, daysInMonth(prev.year, prev.month))
+    };
+  }
+  function formatMoney(cents) {
+    const whole = Math.floor(cents / 100);
+    const rest = cents % 100;
+    return `${integerFormatter.format(whole)}${rest ? ',' + String(rest).padStart(2, '0') : ''} ₴`;
+  }
+  function formatCompact(cents) {
+    const amount = cents / 100;
+    if (amount >= 1000000) return `${String((amount / 1000000).toFixed(1)).replace('.', ',')}м`;
+    if (amount >= 1000) return `${String((amount / 1000).toFixed(1)).replace('.', ',')}к`;
+    return `${Math.floor(amount)}${cents % 100 ? ',' + String(cents % 100).padStart(2, '0') : ''}`;
+  }
+  function formatDate(date) {
+    const p = dateParts(date);
+    return p ? dateFormatter.format(new Date(Date.UTC(p.year, p.month - 1, p.day))) : '';
+  }
+  function parseMoney(value) {
+    const normalized = String(value).trim().replace(/[\s\u00a0\u202f]/g, '').replace(',', '.');
+    if (!/^\d{1,9}(?:\.\d{1,2})?$/.test(normalized)) return null;
+    const [whole, cents = ''] = normalized.split('.');
+    return Number(whole) * 100 + Number((cents + '00').slice(0, 2));
+  }
+  return { iso, dateParts, utcDay, daysInMonth, shiftMonth, isScheduledWork, dayType, isWorking,
+    dayAmount, periodTotal, monthStats, payday, formatMoney, formatCompact, formatDate, parseMoney };
+});
+
+</script>
+<script>
+/* Salary calendar 4/2 — standalone browser application, no accounts or backend required. */
+(() => {
+  'use strict';
+
+  const L = window.SalaryLogic;
+  const STORAGE_KEY = 'zminaSalaryCalendarV1';
+  const today = new Date();
+  const todayISO = L.iso(today.getFullYear(), today.getMonth() + 1, today.getDate());
+  const monthFormatter = new Intl.DateTimeFormat('uk-UA', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const shortDayFormatter = new Intl.DateTimeFormat('uk-UA', { weekday: 'long', timeZone: 'UTC' });
+  const el = (id) => document.getElementById(id);
+  const view = { year: today.getFullYear(), month: today.getMonth() + 1 };
+  let state = { version: 1, anchorDate: todayISO, anchorPosition: 1, days: {} };
+  let editingDate = null;
+  let toastTimer = null;
+  let storageOK = true;
+
+  function validEntry(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+    const entry = {};
+    if (raw.override === 'replacement' || raw.override === 'unpaid') entry.override = raw.override;
+    if (Number.isSafeInteger(raw.amount) && raw.amount >= 0 && raw.amount <= 99999999999) entry.amount = raw.amount;
+    if (typeof raw.note === 'string' && raw.note.trim()) entry.note = raw.note.slice(0, 250);
+    return entry;
+  }
+  function normalize(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('Невірний формат');
+    if (!L.dateParts(raw.anchorDate) || !Number.isInteger(raw.anchorPosition) || raw.anchorPosition < 1 || raw.anchorPosition > 6) {
+      throw new Error('Невірні параметри графіка');
+    }
+    if (!raw.days || typeof raw.days !== 'object' || Array.isArray(raw.days)) throw new Error('Не знайдено днів');
+    const entries = Object.entries(raw.days);
+    if (entries.length > 10000) throw new Error('Занадто багато записів');
+    const days = {};
+    for (const [date, rawEntry] of entries) {
+      if (!L.dateParts(date) || !rawEntry || typeof rawEntry !== 'object' || Array.isArray(rawEntry)) {
+        throw new Error('Некоректний запис дня');
+      }
+      if (rawEntry.override != null && !['unpaid', 'replacement'].includes(rawEntry.override)) throw new Error('Некоректний статус дня');
+      if (rawEntry.amount != null && (!Number.isSafeInteger(rawEntry.amount) || rawEntry.amount < 0 || rawEntry.amount > 99999999999)) {
+        throw new Error('Некоректна сума');
+      }
+      days[date] = validEntry(rawEntry);
+    }
+    return { version: 1, anchorDate: raw.anchorDate, anchorPosition: raw.anchorPosition, days };
+  }
+  function loadLocal() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) state = normalize(JSON.parse(saved));
+    } catch (error) {
+      storageOK = false;
+      console.warn('Помилка читання даних:', error);
+    }
+    updateStorageIndicator();
+  }
+  function updateStorageIndicator() {
+    const element = el('save-status');
+    element.classList.toggle('warning', !storageOK);
+    element.innerHTML = storageOK
+      ? '<span class="status-dot"></span> Дані зберігаються на пристрої'
+      : '<span class="status-dot"></span> Не вдалося зберегти дані';
+    element.title = storageOK ? 'Записи зберігаються у цьому браузері' : 'Перевірте налаштування сховища або збережіть резервну копію';
+  }
+  function saveLocal() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      storageOK = true;
+    } catch (error) {
+      storageOK = false;
+      console.warn('Помилка запису даних:', error);
+      showToast('Не вдалося зберегти на пристрої. Експортуйте резервну копію.');
+    }
+    updateStorageIndicator();
+  }
+  function showToast(message) {
+    const toast = el('toast');
+    toast.textContent = message;
+    toast.classList.add('visible');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('visible'), 3500);
+  }
+  function monthName(year, month) {
+    const s = monthFormatter.format(new Date(Date.UTC(year, month - 1, 1))).replace(/\s*р\.$/, '');
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  function renderOverview() {
+    const stats = L.monthStats(state, view.year, view.month);
+    el('overview-period').textContent = monthName(view.year, view.month);
+    el('stat-total').textContent = L.formatMoney(stats.total);
+    el('stat-first').textContent = L.formatMoney(stats.firstHalf);
+    el('stat-second').textContent = L.formatMoney(stats.secondHalf);
+    el('stat-shifts').textContent = `${stats.recorded} / ${stats.working}`;
+    el('shifts-caption').textContent = `Заміни: ${stats.replacements} · За свій рахунок: ${stats.unpaid}`;
+  }
+  function renderPayments() {
+    const next = L.shiftMonth(view.year, view.month, 1);
+    const stats = L.monthStats(state, view.year, view.month);
+    el('pay-25-date').textContent = L.formatDate(L.iso(view.year, view.month, 25));
+    el('pay-10-date').textContent = L.formatDate(L.iso(next.year, next.month, 10));
+    el('pay-25-amount').textContent = L.formatMoney(stats.firstHalf);
+    el('pay-10-amount').textContent = L.formatMoney(stats.secondHalf);
+  }
+  function calendarCell(date, inMonth) {
+    const parts = L.dateParts(date);
+    if (!inMonth) return `<div class="calendar-day outside" aria-hidden="true"><span class="date-number">${Number(date.slice(8, 10))}</span></div>`;
+    const type = L.dayType(date, state);
+    const entry = state.days[date] || {};
+    const hasAmount = L.isWorking(type) && Object.prototype.hasOwnProperty.call(entry, 'amount');
+    const amount = L.dayAmount(date, state);
+    const payday = L.payday(date, state);
+    const dayLabels = { work: 'Робоча зміна', off: 'Вихідний', replacement: 'Заміна', unpaid: 'За свій рахунок' };
+    const initials = { work: 'Р', off: 'В', replacement: 'З', unpaid: 'С' };
+    let money = '<span class="day-income empty">—</span>';
+    if (hasAmount) money = `<span class="day-income desktop-income" title="${L.formatMoney(amount)}">${amount >= 1000000 ? L.formatCompact(amount) + ' ₴' : L.formatMoney(amount)}</span><span class="day-income mobile-income" title="${L.formatMoney(amount)}">${L.formatCompact(amount)} ₴</span>`;
+    else if (L.isWorking(type)) money = '<span class="day-income empty">+ сума</span>';
+    const payHTML = payday ? `<span class="payday-chip" title="Виплата: ${L.formatMoney(payday.amount)}"><span class="pay-desktop">ЗП ${payday.kind} · ${L.formatCompact(payday.amount)} ₴</span><span class="pay-mobile">ЗП ${payday.kind}</span></span>` : '';
+    const payAria = payday ? `; виплата ${payday.kind} числа — ${L.formatMoney(payday.amount)}` : '';
+    const aria = `${L.formatDate(date)}; ${dayLabels[type]}; ${hasAmount ? L.formatMoney(amount) : 'сума не внесена'}${payAria}`;
+    // Date/amount/status data comes only from validated local input and program-generated values.
+    return `<button type="button" class="calendar-day ${type}${date === todayISO ? ' today' : ''}${payday ? ' has-payday' : ''}" data-date="${date}" aria-label="${aria}">
+      <span class="day-top"><span class="date-number">${parts.day}</span><span class="day-indicator">${initials[type]}</span></span>
+      <span class="day-label">${dayLabels[type]}</span>${money}${payHTML}</button>`;
+  }
+  function renderCalendar() {
+    el('month-label').textContent = monthName(view.year, view.month);
+    const firstWeekday = new Date(Date.UTC(view.year, view.month - 1, 1)).getUTCDay();
+    const offset = (firstWeekday + 6) % 7;
+    const last = L.daysInMonth(view.year, view.month);
+    const cellCount = Math.ceil((offset + last) / 7) * 7;
+    const html = [];
+    for (let cell = 0; cell < cellCount; cell++) {
+      const dt = new Date(Date.UTC(view.year, view.month - 1, cell - offset + 1));
+      const date = L.iso(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
+      html.push(calendarCell(date, dt.getUTCFullYear() === view.year && dt.getUTCMonth() + 1 === view.month));
+    }
+    el('day-grid').innerHTML = html.join('');
+    el('previous-month').disabled = view.year === 1900 && view.month === 1;
+    el('next-month').disabled = view.year === 2100 && view.month === 12;
+  }
+  function render() {
+    renderOverview();
+    renderPayments();
+    renderCalendar();
+    el('anchor-date').value = state.anchorDate;
+    el('anchor-position').value = String(state.anchorPosition);
+  }
+  function goToMonth(offset) {
+    const next = L.shiftMonth(view.year, view.month, offset);
+    if (next.year < 1900 || next.year > 2100) return;
+    view.year = next.year;
+    view.month = next.month;
+    render();
+  }
+  function setCurrentMonth() {
+    view.year = today.getFullYear();
+    view.month = today.getMonth() + 1;
+    render();
+  }
+  function selectedStatus() {
+    return document.querySelector('input[name="day-status"]:checked').value;
+  }
+  function updateAmountAvailability() {
+    if (!editingDate) return;
+    const status = selectedStatus();
+    const workable = status === 'replacement' || (status === 'scheduled' && L.isScheduledWork(editingDate, state.anchorDate, state.anchorPosition));
+    el('day-amount').disabled = !workable;
+    el('day-amount').parentElement.classList.toggle('disabled', !workable);
+    el('amount-hint').textContent = workable
+      ? 'Введіть фактичну суму або залиште поле порожнім, якщо ще не знаєте заробіток.'
+      : 'Цей день не оплачується. Щоб внести заробіток, оберіть «Вийшла на заміну».';
+  }
+  function openDayDialog(date) {
+    editingDate = date;
+    const entry = state.days[date] || {};
+    const p = L.dateParts(date);
+    const weekday = shortDayFormatter.format(new Date(Date.UTC(p.year, p.month - 1, p.day)));
+    const scheduledWork = L.isScheduledWork(date, state.anchorDate, state.anchorPosition);
+    el('dialog-heading').textContent = L.formatDate(date);
+    el('dialog-schedule').textContent = `${weekday[0].toUpperCase() + weekday.slice(1)} · За графіком: ${scheduledWork ? 'робоча зміна' : 'вихідний'}`;
+    el('scheduled-hint').textContent = scheduledWork ? 'Робочий день' : 'Вихідний';
+    document.querySelector(`input[name="day-status"][value="${entry.override || 'scheduled'}"]`).checked = true;
+    el('day-amount').value = Object.prototype.hasOwnProperty.call(entry, 'amount') ? String(entry.amount / 100).replace('.', ',') : '';
+    el('day-note').value = entry.note || '';
+    el('day-error').hidden = true;
+    updateAmountAvailability();
+    el('day-dialog').showModal();
+  }
+  function closeDayDialog() {
+    el('day-dialog').close();
+    editingDate = null;
+  }
+  function saveEditedDay(event) {
+    event.preventDefault();
+    if (!editingDate) return;
+    const status = selectedStatus();
+    const entry = { ...(state.days[editingDate] || {}) };
+    if (status === 'scheduled') delete entry.override;
+    else entry.override = status;
+    const isWork = status === 'replacement' || (status === 'scheduled' && L.isScheduledWork(editingDate, state.anchorDate, state.anchorPosition));
+    if (isWork) {
+      const rawAmount = el('day-amount').value.trim();
+      if (rawAmount) {
+        const cents = L.parseMoney(rawAmount);
+        if (cents === null) {
+          el('day-error').textContent = 'Введіть коректну суму: невід’ємне число, максимум два знаки після коми.';
+          el('day-error').hidden = false;
+          el('day-amount').focus();
+          return;
+        }
+        entry.amount = cents;
+      } else delete entry.amount;
+    }
+    // Existing amount is retained on unpaid/off days but never counted. Reset clears it completely.
+    const note = el('day-note').value.trim();
+    if (note) entry.note = note.slice(0, 250);
+    else delete entry.note;
+    if (Object.keys(entry).length) state.days[editingDate] = entry;
+    else delete state.days[editingDate];
+    saveLocal();
+    closeDayDialog();
+    render();
+    if (storageOK) showToast('Зміни збережено');
+  }
+  function resetEditedDay() {
+    if (!editingDate) return;
+    delete state.days[editingDate];
+    saveLocal();
+    closeDayDialog();
+    render();
+    if (storageOK) showToast('День повернуто до графіка 4/2');
+  }
+  function exportBackup() {
+    try {
+      const data = { ...state, exportedAt: new Date().toISOString(), app: 'Зміна — зарплата 4/2' };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `zmina-backup-${todayISO}.json`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showToast('Резервна копія створена');
+    } catch (error) {
+      console.warn(error);
+      showToast('Не вдалося експортувати дані');
+    }
+  }
+  async function importBackup(event) {
+    const input = event.target;
+    const file = input.files?.[0];
+    if (!file) return;
+    try {
+      if (file.size > 2 * 1024 * 1024) throw new Error('Файл надто великий (максимум 2 МБ)');
+      const incoming = normalize(JSON.parse(await file.text()));
+      const totalDays = Object.keys(incoming.days).length;
+      if (!window.confirm(`Імпортувати ${totalDays} записів? Поточні дані будуть замінені даними з файлу.`)) return;
+      state = incoming;
+      saveLocal();
+      render();
+      showToast(storageOK ? 'Дані успішно імпортовано' : 'Дані імпортовано, але браузер не дозволив їх зберегти');
+    } catch (error) {
+      showToast(`Помилка імпорту: ${error.message}`);
+    } finally {
+      input.value = '';
+    }
+  }
+
+  loadLocal();
+  render();
+  el('previous-month').addEventListener('click', () => goToMonth(-1));
+  el('next-month').addEventListener('click', () => goToMonth(1));
+  el('today-button').addEventListener('click', setCurrentMonth);
+  el('month-label').addEventListener('click', setCurrentMonth);
+  el('day-grid').addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-date]');
+    if (button) openDayDialog(button.dataset.date);
+  });
+  el('schedule-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const anchor = el('anchor-date').value;
+    const position = Number(el('anchor-position').value);
+    if (!L.dateParts(anchor) || !Number.isInteger(position) || position < 1 || position > 6) {
+      showToast('Укажіть правильну опорну дату та день циклу');
+      return;
+    }
+    state.anchorDate = anchor;
+    state.anchorPosition = position;
+    saveLocal();
+    render();
+    if (storageOK) showToast('Графік 4/2 оновлено для всіх місяців');
+  });
+  document.querySelectorAll('input[name="day-status"]').forEach((radio) => radio.addEventListener('change', updateAmountAvailability));
+  el('day-form').addEventListener('submit', saveEditedDay);
+  el('reset-day').addEventListener('click', resetEditedDay);
+  el('dialog-close').addEventListener('click', closeDayDialog);
+  el('day-dialog').addEventListener('click', (event) => { if (event.target === el('day-dialog')) closeDayDialog(); });
+  el('day-dialog').addEventListener('close', () => { editingDate = null; });
+  el('help-button').addEventListener('click', () => el('help-dialog').showModal());
+  el('help-close').addEventListener('click', () => el('help-dialog').close());
+  el('help-done').addEventListener('click', () => el('help-dialog').close());
+  el('help-dialog').addEventListener('click', (event) => { if (event.target === el('help-dialog')) el('help-dialog').close(); });
+  el('export-button').addEventListener('click', exportBackup);
+  el('import-button').addEventListener('click', () => el('import-file').click());
+  el('import-file').addEventListener('change', importBackup);
+  window.addEventListener('storage', (event) => {
+    if (event.key !== STORAGE_KEY || !event.newValue) return;
+    try {
+      state = normalize(JSON.parse(event.newValue));
+      render();
+      showToast('Дані оновлено з іншої вкладки');
+    } catch (error) { console.warn('Некоректні дані з іншої вкладки', error); }
+  });
+})();
+
+</script>
+</body>
+</html>
